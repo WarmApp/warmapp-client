@@ -1,5 +1,5 @@
 class MainController {
-  constructor ($timeout, webDevTec, toastr) {
+  constructor () {
     'ngInject';
 
     this.activate();
