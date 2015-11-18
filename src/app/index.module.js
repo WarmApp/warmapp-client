@@ -4,12 +4,11 @@ import config from './index.config';
 import routerConfig from './index.route';
 
 import runBlock from './index.run';
-import MainController from './main/main.controller';
+import HomeController from './home/home.controller';
 
-angular.module('warmappClient', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngRoute'])
+angular
+  .module('warmappClient', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngRoute'])
   .config(config)
-
   .config(routerConfig)
-
   .run(runBlock)
-  .controller('MainController', MainController)
+  .controller('HomeController', HomeController)
