@@ -1,0 +1,34 @@
+<header class="navbar navbar--inner">
+	<nav class="navbar__container container">
+		<ul class="navbar__list">
+			<li>
+				<a href="/" class="navbar__item">warmapp</a>
+			</li>
+		</ul>
+		<ul class="navbar__list navbar__list--right">
+			<li>
+				<a href="javascript:;" class="navbar__item"> Saiba mais</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+<div class="video__back">
+	<div class="video__container container">
+		<!-- <iframe class="video" src="https://www.youtube.com/embed/JyyIpIq1Pc8" frameborder="0" allowfullscreen></iframe> -->
+		<!-- <youtube-player width="100%" keep-aspect-ratio video-id="id" ng-model="player"></youtube-player> -->
+		<youtube-player class="video player" video-id="current.videoId" ng-model="player"></youtube-player>
+		<section class="playlist__wrapper">
+			<div class="playlist__commands">
+			</div>
+			<ul class="playlist">
+				<li ng-repeat="feed in vm.feeds">
+					<a href="javascript:;" class="playlist__item">
+					<span class="song__title">{{ feed.name }}</span>
+					<span class="song__sender">{{ feed.from.name }}</span>
+					<img ng-src="https://graph.facebook.com/v2.5/{{ feed.from.id }}/picture" alt="{{ feed.from.name }}" class="song__avatar" title="{{ feed.name }}">
+					</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</div>
