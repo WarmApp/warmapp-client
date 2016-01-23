@@ -1,6 +1,8 @@
 class HomeController {
-  constructor () {
+  constructor ($rootScope) {
     'ngInject';
+
+    $rootScope.bodyClass = 'main-page';
 
     this.activate();
   }
